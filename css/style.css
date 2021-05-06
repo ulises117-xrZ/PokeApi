@@ -4,41 +4,6 @@
   box-sizing: border-box;
 }
 
-.pokemon-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.pokemon-container .pokemon {
-  align-items: center;
-  background-color: #04f7ce80;
-  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-  display: flex;
-  height: 20em;
-  justify-content: center;
-  margin: 2em auto;
-  width: 50%;
-}
-.pokemon-container .pokemon p {
-  font-family: "cascadia code";
-  color: #CA5AE8;
-  font-size: 1.5em;
-}
-.pokemon-container .pokemon .propiedades {
-  display: flex;
-  align-content: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .contenedorPrincipal {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -70,4 +35,4 @@
   text-align: center;
 }
 
-/*# sourceMappingURL=principal.css.map */
+/*# sourceMappingURL=style.css.map */
