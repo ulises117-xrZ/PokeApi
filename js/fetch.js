@@ -1,81 +1,43 @@
-function ListaDeType() {
-    fetch('https://pokeapi.co/api/v2/type/')
-        .then(respuesta => respuesta.json())
-        .then(pokemon => {
-            pokemon.results.forEach((elementos)=> cadaTipo(elementos.url))
-        })
+const poke_container = document.getElementById('poke_container');
+const pokemons_number = 500;
+
+
+const llamarPokemons = async () => {
+    for (let i = 1; i < pokemons_number; i++){
+        await getPokemon(i);
+    }
+}
+
+const getPokemon = async id => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const respuesta = await fetch(url);
+    const pokemon = await respuesta.json();
+    showInCard(pokemon.name,
+        pokemon.types[0].type.name,
+        pokemon.sprites.front_shiny,
+        pokemon.abilities[0].ability.name,
+        pokemon.id)
     
 }
 
-function cadaTipo(url) {
-    fetch(`${url}`)
-        .then(respuesta => respuesta.json())
-        .then(respkemon => {
-            respkemon.pokemon.forEach(elementos => {
-                Pokemon(elementos.pokemon.url)
-            })
-        })
-
-
-}
-
-function Pokemon(PokemonUrl) {
-    fetch(`${PokemonUrl}`)
-    .then(res => res.json())
-    .then(datosPkm => {
-            // agregarPokemon( datosPkm.name,
-            //                 datosPkm.types[0].type.name,
-            //                 datosPkm.sprites.back_default);
-            // console.log(datosPkm)
-        })
-}
-
-
-function agregarPokemon(nombre, tipo, sprites) {
-    const fragmento = document.createDocumentFragment();
+function showInCard(nombre, type, sprite, hability, id) {
+    let fragmento = document.createDocumentFragment();
     let div = document.createElement('div');
-    div.className = "pokemon"
-    div.innerHTML = `
-        <img src="${sprites}" alt="Imagen del pokachi">
-            <div class="propiedades">
-                <p>Nombre: <span class="m_nombre n1">${nombre}</span></p>    
-                <p>Tipo: <span class="m_poder p1">${tipo}</span></p>
+    div.innerHTML = ` <div class="pokemon">
+            <img src="${sprite}" alt="Imagen de un pokemon bien perron" class="pokemonImagen">
+            <p class="Identificador">#0<span class="numeroId">${id}</span></p>
+            <p class="nombrePokemon">${nombre}</p>
+            <div class="typeAbility">
+                <p class="type"> ${type}</p>
+                <p class="hability"> ${hability}</p>
             </div>
-    `;
+        </div>`;
     fragmento.appendChild(div);
-    const contenedorPrincipal = document.getElementById("Pokemons-Normales");
-    contenedorPrincipal.appendChild(fragmento);
+    const contenedor = document.getElementById('poke_container');
+    contenedor.appendChild(fragmento);
+
+    
 }
 
-// function saberTipo(tipoPokemon) {
-//     let Normales = [];
-//     switch (tipoPokemon) {
-        
-//     }
-// }
 
-
-ListaDeType()
-//Llamado a la PokeApi con 20 pokemons
-// function peticionTodos() {
-//     fetch(`https://pokeapi.co/api/v2/pokemon?offset=20&limit=20`)
-//         .then(response => response.json())
-//         .then(pokemon3 => {
-//             pokemon3.results.forEach(element => {//pa recorrer todos los urls
-//                 peticionPokemon(element.url)//extraer cada url
-//             });
-
-//         })
-// }
-
-
-// function peticionPokemon(urlPokemon) {
-//     fetch(`${urlPokemon}`)//insertar todos los urls
-//         .then(response => response.json())
-//         .then(pokemonUnico => {
-//             agregarPokemon(
-//                 pokemonUnico.name,//el nombre del pokemon
-//                 pokemonUnico.types[0].type.name,//el tipo de pokemon
-//                 pokemonUnico.sprites.front_default);//la imagen del pokemon
-//         })
-// }
+llamarPokemons();
