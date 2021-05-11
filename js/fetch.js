@@ -1,5 +1,5 @@
 const poke_container = document.getElementById('poke_container');
-const pokemons_number = 150;
+const pokemons_number = 10;
 
 
 const llamarPokemons = async () => {
