@@ -40,8 +40,6 @@ h1 {
   justify-content: space-evenly;
 }
 .poke_container .pokemon .typeAbility .type, .pokemonResultante .pokemon .typeAbility .type {
-  background: #08ff5a;
-  color: #707070;
   padding: 2px 20px;
   border-radius: 4px;
 }
