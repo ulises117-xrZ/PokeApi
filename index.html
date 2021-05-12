@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/principal.css">
-</head>
-<body>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/principal.css" />
+  </head>
+  <body>
     <h1>Pokedex</h1>
-    <div id="poke_container" class="poke_container">
+    <form class="buscador">
+      <input
+        type="text"
+        class="form-control"
+        list="pokemons"
+        placeholder="Nombre o ID"
+      />
+      <button type="button" class="btnsearch btn btn-primary">search</button>
 
+      <datalist id="pokemons">
+        <option value="pikachu"></option>
+        <option value="bulbasaur"></option>
+        <option value="charizard"></option>
+        <option value="onix"></option>
+        <option value="mewtwo"></option>
+        <option value="eevee"></option>
+        <option value="snorlax"></option>
+        <option value="gengar"></option>
+        <option value="mew"></option>
+        <option value="lapras"></option>
+        <option value="gyarados"></option>
+        <option value="ditto"></option>
+      </datalist>
+    </form>
+    <div class="resultados">
+      <h3>Resultados de tu busqueda:</h3>
+      <div class="pokemonResultante">
+        <div class="pokemon">
+          <img src="" alt="Imagen de Un pokemon" class="pokemonImagen" />
+          <p class="identificador">#0 <span class="numeroId"></span></p>
+          <p class="nombrePokemon"></p>
+          <div class="typeAbility">
+            <p class="type"></p>
+            <p class="hability"></p>
+          </div>
+        </div>
+      </div>
     </div>
+    <div id="poke_container" class="poke_container"></div>
     <script src="js/fetch.js"></script>
-</body>
+  </body>
 </html>

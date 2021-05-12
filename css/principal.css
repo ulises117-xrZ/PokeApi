@@ -1,3 +1,25 @@
+.buscador {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.buscador .form-control {
+  width: 15rem;
+  padding: 0.3rem;
+  margin-right: 20px;
+}
+
+.resultados {
+  display: none;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.activo {
+  display: flex;
+}
+
 body {
   background: #e0e0e0;
 }
@@ -6,13 +28,13 @@ h1 {
   text-align: center;
 }
 
-.poke_container {
+.poke_container, .pokemonResultante {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   flex-wrap: wrap;
 }
-.poke_container .pokemon {
+.poke_container .pokemon, .pokemonResultante .pokemon {
   display: flex;
   flex-direction: column;
   padding: 1em;
@@ -23,29 +45,29 @@ h1 {
   box-shadow: 20px 20px 60px #22222281, -20px -20px 60px #ffffff;
   margin: 2em;
 }
-.poke_container .pokemon .pokemonImagen {
+.poke_container .pokemon .pokemonImagen, .pokemonResultante .pokemon .pokemonImagen {
   align-self: center;
   width: 100px;
 }
-.poke_container .pokemon .Identificador {
+.poke_container .pokemon .Identificador, .pokemonResultante .pokemon .Identificador {
   color: #555;
   font-family: "cascadia code";
 }
-.poke_container .pokemon .nombrePokemon {
+.poke_container .pokemon .nombrePokemon, .pokemonResultante .pokemon .nombrePokemon {
   font-size: 1.5em;
   font-family: "cascadia code";
 }
-.poke_container .pokemon .typeAbility {
+.poke_container .pokemon .typeAbility, .pokemonResultante .pokemon .typeAbility {
   display: flex;
   justify-content: space-evenly;
 }
-.poke_container .pokemon .typeAbility .type {
+.poke_container .pokemon .typeAbility .type, .pokemonResultante .pokemon .typeAbility .type {
   background: #08ff5a;
   color: #707070;
   padding: 2px 20px;
   border-radius: 4px;
 }
-.poke_container .pokemon .typeAbility .hability {
+.poke_container .pokemon .typeAbility .hability, .pokemonResultante .pokemon .typeAbility .hability {
   background: #0095eb;
   color: #fff;
   padding: 2px 20px;

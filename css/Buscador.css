@@ -1,0 +1,23 @@
+.buscador {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.buscador .form-control {
+  width: 15rem;
+  padding: 0.3rem;
+  margin-right: 20px;
+}
+
+.resultados {
+  display: none;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.activo {
+  display: flex;
+}
+
+/*# sourceMappingURL=Buscador.css.map */
