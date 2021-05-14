@@ -1,10 +1,87 @@
-.fire {
-  background: #f70800;
+.grass {
+  background: #23e223;
   color: #fff;
 }
 
-.grass {
-  background: #17eb10;
+.fire {
+  background: #f11400;
+  color: #000;
 }
 
-/*# sourceMappingURL=ColoresType.css.map */
+.water {
+  background: #27e;
+  color: #fff;
+}
+
+.bug {
+  background: #0bc50b;
+}
+
+.normal {
+  background: #979797;
+  color: #fff;
+}
+
+.poison {
+  background: #6621e7;
+  color: #fff;
+}
+
+.electric {
+  background: #ffd900ef;
+  color: #000;
+}
+
+.ground {
+  background: #ffe700;
+  background: linear-gradient(180deg, #ffe700 0%, #f0e816d0 47%, #4d4444 100%);
+  color: #000;
+}
+
+.fairy {
+  background: #ca43ec;
+  color: #fff;
+}
+
+.psychic {
+  background: #b900f1;
+  color: #fff;
+}
+
+.fighting {
+  background: #ff9900;
+}
+
+.rock {
+  background: #658100fb;
+}
+
+.ghost {
+  background: #662166;
+  color: #fff;
+}
+
+.ice {
+  background: #2ef;
+}
+
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+.steel {
+  background: #474747;
+}
+
+.dragon {
+  background: #00a4ff;
+  background: linear-gradient(180deg, #00a4ff 0%, #089cf193 47%, #ff1000 100%);
+}
+
+.flying {
+  background: #00a402;
+  background: linear-gradient(180deg, #00a4ff 0%, #444444 47%, #747070 100%);
+}
+
+/*# sourceMappingURL=coloresType.css.map */

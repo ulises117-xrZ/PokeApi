@@ -39,13 +39,13 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
-.poke_container .pokemon .typeAbility .type, .pokemonResultante .pokemon .typeAbility .type {
+.poke_container .pokemon .typeAbility .type, .poke_container .pokemon .typeAbility #Tipo, .pokemonResultante .pokemon .typeAbility .type, .pokemonResultante .pokemon .typeAbility #Tipo {
   padding: 2px 20px;
   border-radius: 4px;
 }
 .poke_container .pokemon .typeAbility .hability, .pokemonResultante .pokemon .typeAbility .hability {
-  background: #0095eb;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   padding: 2px 20px;
   border-radius: 4px;
 }

@@ -20,4 +20,16 @@
   display: flex;
 }
 
+.boton {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+h1 > a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=Buscador.css.map */
